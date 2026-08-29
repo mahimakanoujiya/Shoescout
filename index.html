@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>ShoeScout — Find. Compare. Choose.</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">👟 Shoe<span>Scout</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Shoes</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <p class="tagline">SMART SHOE DISCOVERY</p>
+
+        <h1>
+          Find the right shoe.
+          <span>Compare before you buy.</span>
+        </h1>
+
+        <p class="hero-text">
+          Discover shoes from official brand stores and popular marketplaces
+          in one place.
+        </p>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search shoes, brands..."
+          >
+
+          <button onclick="searchShoes()">
+            Search
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section" id="products">
+
+      <div class="section-heading">
+        <div>
+          <p class="small-title">EXPLORE</p>
+          <h2>Popular Shoes</h2>
+        </div>
+
+        <select id="sortSelect" onchange="sortProducts()">
+          <option value="default">Sort by</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+
+
+      <div class="filters">
+
+        <button onclick="filterProducts('all')">
+          All
+        </button>
+
+        <button onclick="filterProducts('Nike')">
+          Nike
+        </button>
+
+        <button onclick="filterProducts('Adidas')">
+          Adidas
+        </button>
+
+        <button onclick="filterProducts('Puma')">
+          Puma
+        </button>
+
+        <button onclick="filterProducts('Skechers')">
+          Skechers
+        </button>
+
+      </div>
+
+
+      <div class="product-grid" id="productGrid"></div>
+
+    </section>
+
+
+    <section class="about" id="about">
+
+      <p class="small-title">ABOUT SHOESCOUT</p>
+
+      <h2>One place. Multiple stores.</h2>
+
+      <p>
+        ShoeScout is a portfolio project designed to make shoe discovery
+        easier by bringing product information and store links together.
+      </p>
+
+      <div class="features">
+
+        <div>
+          <strong>🔎</strong>
+          <h3>Discover</h3>
+          <p>Search shoes by brand and name.</p>
+        </div>
+
+        <div>
+          <strong>💰</strong>
+          <h3>Compare</h3>
+          <p>Compare prices across stores.</p>
+        </div>
+
+        <div>
+          <strong>✓</strong>
+          <h3>Verified Sources</h3>
+          <p>Identify official brand stores.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 2026 ShoeScout · Built as a portfolio project</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
